@@ -1,0 +1,108 @@
+$type: card
+rules: []
+properties:
+  title:
+    type: element
+    xtype: at-carbon-card-title
+    title: title
+    xgridcols: 12
+    xstyle: 
+    xclass: 
+    actionListeners:
+      - _start
+    modelBind: 'label: title'
+    model: 
+  view7:
+    type: element
+    title: Liquid View 6
+    xtype: at-core-view
+    view: |-
+      {% if items.length == 0 and _action == "firstpage" %}
+      	<div class="layout-vertical layout-center-center pblg pt">
+      		<div class="font-title black pt">You have no recent Notebooks</div>
+      		<at-carbon-button class="goto-onenote-btn my" button-type="contained" button-color="grey" href="{{ link }}">Go to OneNote</at-carbon-button>
+      	</div>
+      {% endif %}
+
+      <style>
+        .goto-onenote-btn {
+          border-radius: 25px;
+          padding-left: 25px;
+          padding-right: 25px;
+        }
+
+        .goto-onenote-btn .button-label {
+          font-weight: 300;
+          color: white !important;
+        }
+      </style>
+    modelRoot: state.model
+    model: 
+    value: 
+  vlist4:
+    type: element
+    xtype: at-core-vlist
+    items: 
+    model: 
+    listHeight: 275px
+    listHeightExpanded: 
+    itemComponent: cloud-files-v31/cloud-files-v31-item-card
+    modelBind: 'hide: items.length == 0 && _action == "firstpage"'
+  footer8:
+    type: element
+    xtype: at-carbon-card-footer
+    modelBind: 'href: link, label: linkLabel, hide: items.length == 0 && _action == "firstpage"'
+    model: 
+$meta:
+  cardId: !!int 21
+  preview-data: |-
+    {
+      "_action": "firstpage",
+      "_page": 1,
+      "_pageSize": 5,
+      "items": [
+        {
+          "id": "AeGKRW8CO8tEjfjn2mOuNq4frS63i_MWQaqS3fRBG7l5EG41cvMzbU62gGm36EmYtOzFZ_9_1f9EgZqUEzbN12zhikVvAjvLRI3459pjrjauBQ",
+          "title": "Resources",
+          "description": "Use CasesFind Managera. Source: Sample Employee Directoryb. AI Intent:find_manager_cardto whom reports <employee>Susan</employee>find_manager_cardshow me the manager of <employee>Jim</employee>find_manager_cardWho is the ma",
+          "type": "OneNote",
+          "link": "https://adenin.sharepoint.com/sites/CiscoPOC/_layouts/15/WopiFrame.aspx?sourcedoc=%7BFF67C5EC-D57F-44FF-819A-941336CDD76C%7D&file=Resources.one&action=default&wdorigin=sharepoint&DefaultItemOpen=1",
+          "containerTitle": "Cisco POC",
+          "containerLink": "https://adenin.sharepoint.com/sites/CiscoPOC/SiteAssets/Cisco POC Notebook",
+          "containerType": "Site",
+          "date": null
+        },
+        {
+          "id": "AYiuMh-ltkRGhfWq9g8da4Pv9w-pxzPCQ4QEZ2d3o6uOQzqJnT0B3ECB515aE_L_n9reDT0J6ERLp5mJ7eR86FSIrjIfpbZERoX1qvYPHWuDBQ",
+          "title": "To-Do",
+          "description": "Mitarbeiterportal --> raus nehmenZu viele Apps: Eine \"mehr...\" App fuer unwichtigere AppsEdit von Mobile?Abkrzungsverzeichnis\"\" in Titel is ein ?A B C D E F G Links gehen nicht (oeffnen das Intranet)\"Ansprechpartner\" --> \"Mitarbe",
+          "type": "OneNote",
+          "link": "https://adenin.sharepoint.com/sites/Transdev/_layouts/15/WopiFrame.aspx?sourcedoc=%7B3D0DDEDA-E809-4B44-A799-89EDE47CE854%7D&file=To-Do.one&action=default&wdorigin=Sharepoint&DefaultItemOpen=1",
+          "containerTitle": "Transdev",
+          "containerLink": "https://adenin.sharepoint.com/sites/Transdev/SiteAssets/Transdev Notebook",
+          "containerType": "Site",
+          "date": null
+        }
+      ],
+      "thumbnail": "http://localhost/components-1.7.0.1464.2t4n5tijntdyvv3pvsvq69qiq3nz8d1l/custom-theme/default-card-logo.svg",
+      "title": "Recent Notebooks",
+      "link": "https://office.com/launch/onenote",
+      "linkLabel": "Go to OneNote",
+      "value": 2,
+      "actionable": true,
+      "date": null,
+      "description": "You have 2 recent NoteBooks.",
+      "briefing": "You have 2 recent NoteBooks. The last used was 'Resources'",
+      "_settings": {},
+      "_hash": "29a6df984b8d551b60ce784d2e5ca187"
+    }
+  preview-mode: live
+  preview-container: event
+  search-term: 
+  service-url: 
+  xclass: 
+  xstyle: 
+  code: |-
+    action.initialize = function (evt) {
+
+    }
