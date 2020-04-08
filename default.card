@@ -46,7 +46,7 @@ properties:
     model: 
     listHeight: 275px
     listHeightExpanded: 
-    itemComponent: cloud-files-v31/cloud-files-v31-item-card
+    itemComponent: cloud-files/cloud-files-item-card
     modelBind: 'hide: items.length == 0 && _action == "firstpage"'
   footer8:
     type: element
